@@ -1,0 +1,35 @@
+<h1 class="mt-5">Agregar producto</h1>
+<hr />
+
+<form [formGroup]="myform">
+  <div class="row g-3 align-item-center mb-3">
+    <div class="col-auto">
+      <label class="col-form-label">Nombre:</label>
+    </div>
+
+    <div class="col-auto">
+      <input type="text" class="form-control" formControlName="nombre" />
+    </div>
+
+    <div class="col-auto">
+      <span
+        class="form-text"
+        *ngIf="haveErr('nombre')"
+        app-error-msg
+        [color]="colorError"
+      >
+        Campo requerido
+      </span>
+    </div>
+  </div>
+
+  <div class="row mt-3">
+    <div class="col">
+      <button class="btn btn-primary" type="submit">Guardar</button>
+    </div>
+  </div>
+</form>
+
+<h3 class="mt-5">Formulario</h3>
+<pre>Value: {{ myform.value | json }}</pre>
+<pre>Valid: {{ myform.valid }}</pre>
