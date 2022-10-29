@@ -9,6 +9,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 export class AgregarComponent implements OnInit {
 
   colorError: string = "green";
+  color: string = 'red'
   myform: FormGroup = this.formBuilder.group({
     nombre: ['', Validators.required],
   })
@@ -19,9 +20,14 @@ export class AgregarComponent implements OnInit {
 
   ngOnInit(): void { }
 
-
   haveErr(fieldName: string): boolean {
     return this.myform.get(fieldName)?.invalid || false;
+  }
+
+  cambiarColor() {
+    const color = "#xxxxxx".replace(/x/g, y => (Math.random() * 16 | 0).toString(16));
+    console.log(color);
+    this.color = color;
   }
 
 }

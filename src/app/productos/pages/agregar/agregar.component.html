@@ -12,12 +12,11 @@
     </div>
 
     <div class="col-auto">
-      <span
-        class="form-text"
-        *ngIf="haveErr('nombre')"
-        app-error-msg
-        [color]="colorError"
-      >
+      <span app-error-msg [color]="color" [isValid]="haveErr('nombre')">
+        <!-- *ngIf="haveErr('nombre')" -->
+        <!-- mensaje="Debe ingresar este campo" -->
+        <!-- [color]="colorError" -->
+        <!-- class="form-text" -->
         Campo requerido
       </span>
     </div>
@@ -26,10 +25,23 @@
   <div class="row mt-3">
     <div class="col">
       <button class="btn btn-primary" type="submit">Guardar</button>
+      &nbsp;
+      <button class="btn btn-primary" type="button" (click)="cambiarColor()">
+        Cambiar color
+      </button>
     </div>
   </div>
 </form>
 
+<hr />
 <h3 class="mt-5">Formulario</h3>
 <pre>Value: {{ myform.value | json }}</pre>
 <pre>Valid: {{ myform.valid }}</pre>
+
+<hr />
+<div class="row nt-5" *appCustomIf="myform.valid">
+  <!-- *ngIf="haveErr('nombre')"  -->
+  <div class="col">
+    <div class="alert alert-primary">Todo OK!</div>
+  </div>
+</div>
