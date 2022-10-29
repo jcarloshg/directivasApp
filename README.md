@@ -2,6 +2,20 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.2.5.
 
+## screenshots
+### cambiar_color
+![cambiar_color](https://raw.githubusercontent.com/jcarloshg/directivasApp/main/src/assets/screenshots/0-cambiartcolor.png)
+![cambiar_color](https://raw.githubusercontent.com/jcarloshg/directivasApp/main/src/assets/screenshots/01.png)
+- code 
+![code_cambiar](https://github.com/jcarloshg/directivasApp/blob/main/src/assets/screenshots/error-msg.directive.png)
+
+### struct directive
+![](https://raw.githubusercontent.com/jcarloshg/directivasApp/main/src/assets/screenshots/03-template.png)
+- code
+![](https://raw.githubusercontent.com/jcarloshg/directivasApp/main/src/assets/screenshots/code.png)
+
+
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
